@@ -1,0 +1,118 @@
+/* Estilos gerais */
+body {
+    color: #fff;
+    background: linear-gradient(180deg, #000000, #3e3e3e);
+    margin: 0;
+    font-family: "Permanent Marker", cursive;
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+/* Cabeçalho */
+header {
+    background: rgb(28, 92, 44);
+    color: #fff;
+    padding: 20px 10%;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção principal */
+.chamada {
+    background: rgba(88, 86, 90, 0.9);
+    color: #1a1a1a;
+    padding: 80px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.chamada h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.chamada p {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Seção de categorias */
+.categoria {
+    margin: 50px auto;
+    padding: 20px 5%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.categoria h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffcb5c;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Vídeos */
+.categoria-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.categoria-videos {
+    display: flex;
+    justify-content: space-between; /* Adiciona espaçamento uniforme entre os vídeos */
+    align-items: center; /* Alinha verticalmente os vídeos */
+    gap: 10px; /* Espaçamento entre os vídeos */
+    overflow-x: auto; /* Adiciona barra de rolagem horizontal caso necessário */
+    flex-wrap: nowrap; /* Garante que todos os vídeos fiquem na mesma linha */
+}
+
+.categoria-videos img {
+    flex-shrink: 0; /* Impede que as imagens sejam redimensionadas para caber na tela */
+    width: 200px; /* Define uma largura fixa para os vídeos */
+    height: 150px; /* Define uma altura fixa */
+    border-radius: 5px; /* Deixa as bordas arredondadas */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    opacity: 0.8; /* Adiciona uma opacidade inicial */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Efeitos de hover */
+}
+
+.categoria-videos img:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho ao passar o mouse */
+    opacity: 1; /* Remove a opacidade ao passar o mouse */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .chamada {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .categoria-videos img {
+        width: 100%;
+        height: auto;
+    }
+}
